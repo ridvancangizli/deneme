@@ -1,0 +1,65 @@
+# import modülü time.sleep kullanışmıştır sadece.
+import time
+
+kullanıcı_adı="ridvancangizli"
+kullanıcı_sifre="ridvan123"
+
+while True:
+
+ kullanıcı_girişi = input("Lütfen Kullanıcı Adınızı Giriniz:")
+ kullanıcı_sifre1  = input ( "Lütfen Şifrenizi Giriniz")
+
+
+ if kullanıcı_girişi == kullanıcı_adı and kullanıcı_sifre1 == kullanıcı_sifre:
+     print("Lütfen 1 Saniye Bekleyiniz")
+     time.sleep(2)
+     print("Başarılı Bir Şekilde Giriş Yaptınız Hoşgeldiniz")
+     break
+
+
+ elif kullanıcı_girişi != kullanıcı_adı and kullanıcı_sifre1 == kullanıcı_sifre:
+     print("Lütfen Biraz Bekleyiniz!")
+
+     time.sleep(2)
+     print("Kullanıcı Adınız Hatalı! Değiştirmek için 'H' Yazınız.")
+
+     kullanıcı_değişme= input()
+     if kullanıcı_değişme == "H":
+
+         yeni_kullanici = input("Lütfen Yeni Kullanıcı Adınızı Giriniz:")
+         kullanıcı_adı = yeni_kullanici
+         time.sleep(2)
+         print("Kullanıcı Adınız Başarılı Bir Şekilde Değiştirildi.")
+
+     else:
+         continue
+
+ elif kullanıcı_girişi == kullanıcı_adı and kullanıcı_sifre1 != kullanıcı_sifre:
+     print("Lütfen Biraz Bekleyiniz!")
+     time.sleep(2)
+     print("Şifreniz Hatalı Değişmek için 'H' Yazınız")
+     kullanıcı_değişme = input()
+     if kullanıcı_değişme == "H":
+         yeni_kullanici = input("Lütfen Yeni Şifrenizi Giriniz:")
+         kullanıcı_sifre = yeni_kullanici
+         time.sleep(2)
+         print("Şifreniz Başarılı Bir Şekilde Değiştirildi.")
+
+ else:
+     time.sleep(1)
+     print("Her İki Bilginizde Hatalı \n(Şifrenizi Değişmek için 'T')\t\n(Kullanıcı Adınızı Değiştirmek için 'H') Basınız")
+     hatali_sifre = input()
+     if hatali_sifre == "H":
+         time.sleep(1)
+         yeni_hatali_kullanıcıadı = input("Lütfen Yeni Kullanıcı Adınızı  Giriniz:")
+         kullanıcı_adı = yeni_hatalı_kullanıcıadı
+         time.sleep(1)
+         print("Kullanıcı Adınız Başarılı Bir Şekilde Değiştirildi.")
+
+     elif hatali_sifre == "T":
+         time.sleep(1)
+         yeni_hatalı_sifre= input("Lütfen Yeni Şifrenizi Giriniz:")
+         kullanıcı_sifre = yeni_hatali_sifre
+         time.sleep(1)
+         print("Şifreniz Başarılı Bir Şekilde Değiştirildi.")
+
